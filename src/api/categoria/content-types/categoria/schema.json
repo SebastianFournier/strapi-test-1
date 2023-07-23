@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "singularName": "categoria",
+    "pluralName": "categorias",
+    "displayName": "categoria",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "categoria": {
+      "type": "text",
+      "required": true
+    },
+    "vuelo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vuelo.vuelo",
+      "mappedBy": "categoria"
+    }
+  }
+}

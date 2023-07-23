@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vuelos",
+  "info": {
+    "singularName": "vuelo",
+    "pluralName": "vuelos",
+    "displayName": "Vuelo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vuelo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "categoria": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "vuelo"
+    }
+  }
+}
